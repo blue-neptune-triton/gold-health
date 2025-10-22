@@ -1,202 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gold Health Stem Cell Clinic</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    :root {
-      --primary: #017E7E;
-      --accent: #D4AF37;
-      --light-bg: #F7FAFC;
-      --dark-text: #0A1E2A;
-    }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: var(--dark-text);
-      background-color: var(--light-bg);
-      line-height: 1.6;
-    }
-    .top-bar {
-      background: var(--primary);
-      color: white;
-      font-size: 0.85rem;
-      padding: 0.3rem 1rem;
-      text-align: right;
-    }
-    .top-bar a { color:white; margin-left:1rem; text-decoration:none; }
-    header {
-      background:white;
-      padding:1rem 2rem;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      border-bottom:1px solid #eee;
-      position:sticky;
-      top:0;
-      z-index:1000;
-    }
-    header .logo {
-      font-size:1.8rem;
-      font-weight:bold;
-      color:var(--primary);
-    }
-    nav ul {
-      list-style:none; margin:0; padding:0; display:flex;
-    }
-    nav li { margin-left:1.5rem; }
-    nav a { color:var(--dark-text); text-decoration:none; font-weight:500; }
-    nav a:hover { color:var(--primary); }
-    .cta-button {
-      background:var(--primary); color:white; padding:0.6rem 1.2rem;
-      border-radius:4px; text-decoration:none; font-weight:bold;
-    }
-    .hero {
-      display:flex; flex-wrap:wrap; align-items:center; padding:3rem 2rem; background:white;
-    }
-    .hero-text { flex:1 1 45%; }
-    .hero-text h1 { font-size:2.4rem; color:var(--primary); margin-bottom:1rem; }
-    .hero-text p { margin-bottom:1.5rem; max-width:500px; }
-    .hero-image { flex:1 1 45%; text-align:center; }
-    .hero-image img { max-width:100%; border-radius:8px; }
-    .features { background:var(--light-bg); padding:2rem 1rem; text-align:center; }
-    .features h2 { font-size:1.8rem; color:var(--primary); margin-bottom:2rem; }
-    .feature-grid { display:flex; flex-wrap:wrap; justify-content:center; }
-    .feature { flex:1 1 200px; max-width:250px; margin:1rem; background:white;
-               padding:1.5rem; border-radius:8px; box-shadow:0 2px 4px rgba(0,0,0,0.1); }
-    .feature i { font-size:2rem; color:var(--accent); margin-bottom:0.5rem; }
-    .feature h3 { margin-top:0; color:var(--primary); font-size:1.2rem; }
-    .feature p { font-size:0.9rem; }
-    /* new conditions section */
-    .conditions { padding:3rem 2rem; background:white; text-align:center; }
-    .conditions h2 { color:var(--primary); margin-bottom:2rem; }
-    .condition-grid { display:flex; flex-wrap:wrap; justify-content:center; }
-    .condition { flex:1 1 250px; max-width:280px; margin:1rem; background:var(--light-bg);
-                padding:1.5rem; border-radius:8px; box-shadow:0 2px 4px rgba(0,0,0,0.1); }
-    .condition i { font-size:2rem; color:var(--accent); margin-bottom:0.5rem; }
-    .condition h3 { margin-top:0; color:var(--primary); font-size:1.2rem; }
-    .condition p { font-size:0.9rem; }
-    .testimonials { padding:3rem 2rem; background:white; text-align:center; }
-    .testimonials h2 { color:var(--primary); margin-bottom:2rem; }
-    .testimonial { max-width:600px; margin:1rem auto; font-style:italic; }
-    .testimonial span { display:block; margin-top:0.5rem; font-weight:bold; color:var(--accent); }
-    .offer-section { padding:3rem 2rem; background:var(--primary); color:white; text-align:center; }
-    .offer-section h2 { margin-bottom:1rem; }
-    .offer-section p { margin-bottom:1.5rem; font-size:1.1rem; }
-    .offer-section a { background:var(--accent); color:var(--dark-text); padding:0.8rem 1.6rem; border-radius:4px; text-decoration:none; font-weight:bold; }
-    .contact { background:white; padding:2rem 2rem; text-align:center; }
-    .contact h2 { color:var(--primary); }
-    .contact p { margin-bottom:0.5rem; }
-    footer { background:var(--primary); color:white; text-align:center; padding:1rem; }
-    @media (max-width:768px) {
-       .hero { flex-direction:column; text-align:center; }
-       nav ul { flex-wrap:wrap; }
-       nav li { margin-left:0.8rem; margin-top:0.5rem; }
-       .feature, .condition { flex:1 1 100%; max-width:300px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold Health Stem Cell Clinic</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+  --primary: #017E7E;
+  --accent: #D4AF37;
+  --light-bg: #F7FAFC;
+  --dark-text: #0A1E2A;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--dark-text);
+  background-color: var(--light-bg);
+  line-height: 1.6;
+}
+.top-bar {
+  background: var(--primary);
+  color: white;
+  font-size: 0.85rem;
+  padding: 0.3rem 1rem;
+  text-align: right;
+}
+.top-bar a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+header {
+  background: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+header nav a {
+  margin: 0 1rem;
+  color: var(--dark-text);
+  text-decoration: none;
+  font-weight: 500;
+}
+header nav a:hover {
+  color: var(--primary);
+}
+header .cta-btn {
+  padding: 0.5rem 1rem;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4rem 2rem;
+  background: var(--light-bg);
+}
+.hero .hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+.hero .hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+.hero .hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.hero .hero-text .btn {
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.hero .hero-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+.hero .hero-image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.features {
+  background: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.feature {
+  background: var(--light-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.feature i {
+  font-size: 2rem;
+  color: var(--primary);
+}
+.feature h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.feature p {
+  font-size: 0.9rem;
+}
+.treatments {
+  padding: 4rem 2rem;
+  background: var(--light-bg);
+  text-align: center;
+}
+.treatments h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.treatment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.treatment {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.treatment i {
+  font-size: 2rem;
+  color: var(--primary);
+}
+.treatment h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.treatment p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.treatment a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+.offer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+.offer h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.offer p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.offer .btn {
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.contact {
+  padding: 4rem 2rem;
+  background: white;
+  text-align: center;
+}
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.contact p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.contact a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+}
+</style>
 </head>
 <body>
-  <div class="top-bar">
-    <a href="#">FAQs</a>
-    <a href="#">Research</a>
-    <a href="#">Events</a>
+<div class="top-bar">
+  <a href="#faqs">FAQs</a>
+  <a href="#research">Research</a>
+  <a href="#events">Events</a>
+</div>
+<header>
+  <div class="logo">Gold Health</div>
+  <nav>
+    <a href="#science">Science</a>
+    <a href="#treatments">Treatments</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#about">About</a>
+    <a href="#blog">Blog</a>
+  </nav>
+  <a href="#contact" class="cta-btn">Free Consultation</a>
+</header>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Advanced Stem Cell Therapy &amp; Regenerative Medicine</h1>
+    <p>Experience the healing power of cutting-edge regenerative treatments tailored to your needs.</p>
+    <a href="#contact" class="btn">Get Started</a>
   </div>
-  <header>
-    <div class="logo">Gold Health</div>
-    <nav>
-      <ul>
-        <li><a href="#">Science</a></li>
-        <li><a href="#">Treatments</a></li>
-        <li><a href="#">Testimonials</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Blog</a></li>
-      </ul>
-    </nav>
-    <a href="#contact" class="cta-button">Free Consultation</a>
-  </header>
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Advanced Stem Cell Therapy &amp; Regenerative Medicine</h1>
-      <p>At Gold Health, we empower your body’s natural healing with high-quality stem cell treatments. Experience cutting‑edge science in a relaxing, coastal-inspired clinic setting.</p>
-      <a href="#contact" class="cta-button">Get Started Today</a>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Relaxing beach scene">
+  </div>
+</section>
+<section class="features">
+  <h2>Why Choose Gold Health?</h2>
+  <div class="feature-grid">
+    <div class="feature">
+      <i class="fas fa-file-medical"></i>
+      <h3>Documented Results</h3>
+      <p>Our treatments are backed by data and deliver real, measurable outcomes.</p>
     </div>
-    <div class="hero-image">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Beach sunrise">
+    <div class="feature">
+      <i class="fas fa-user-md"></i>
+      <h3>Decades of Experience</h3>
+      <p>Our team includes leading clinicians with years of expertise in regenerative medicine.</p>
     </div>
-  </section>
-  <section class="features">
-    <h2>Why Choose Gold Health?</h2>
-    <div class="feature-grid">
-      <div class="feature">
-        <i class="fas fa-file-medical"></i>
-        <h3>Documented Results</h3>
-        <p>Our treatments are backed by clinical research and real‑world outcomes.</p>
-      </div>
-      <div class="feature">
-        <i class="fas fa-user-md"></i>
-        <h3>Decades of Expertise</h3>
-        <p>Our experienced clinicians have delivered thousands of successful procedures.</p>
-      </div>
-      <div class="feature">
-        <i class="fas fa-vial"></i>
-        <h3>High‑Potency Cells</h3>
-        <p>We source high‑quality cells to maximize healing and regenerative potential.</p>
-      </div>
-      <div class="feature">
-        <i class="fas fa-heart"></i>
-        <h3>Personalized Care</h3>
-        <p>Each treatment plan is tailored to your unique needs and wellness goals.</p>
-      </div>
+    <div class="feature">
+      <i class="fas fa-vial"></i>
+      <h3>High-Potency Stem Cells</h3>
+      <p>We use potent stem cells for maximum regenerative potential.</p>
     </div>
-  </section>
-  <section class="conditions">
-    <h2>Conditions We Treat</h2>
-    <div class="condition-grid">
-      <div class="condition">
-        <i class="fas fa-dumbbell"></i>
-        <h3>Orthopedic &amp; Sports Injuries</h3>
-        <p>Promote faster healing, reduce pain and regenerate tissues for orthopedic and sports injuries in knees, shoulders, hips and more.</p>
-      </div>
-      <div class="condition">
-        <i class="fas fa-spa"></i>
-        <h3>Spine &amp; Disc Conditions</h3>
-        <p>Advanced treatments to alleviate back and neck pain—from herniated discs and sciatica to degenerative disc disease.</p>
-      </div>
-      <div class="condition">
-        <i class="fas fa-dna"></i>
-        <h3>Autoimmune Diseases</h3>
-        <p>Innovative stem cell therapy for conditions like lupus, rheumatoid arthritis, osteoarthritis and other autoimmune disorders.</p>
-      </div>
+    <div class="feature">
+      <i class="fas fa-hand-holding-heart"></i>
+      <h3>Personalized Treatments</h3>
+      <p>Every therapy is tailored to the individual for optimal results.</p>
     </div>
-  </section>
-  <section class="testimonials">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonial">
-      “Gold Health gave me back the freedom to enjoy my favorite activities. The team made me feel at ease every step of the way.”
-      <span>- Maria S.</span>
+  </div>
+</section>
+<section class="treatments" id="treatments">
+  <h2>Treatments &amp; Therapies</h2>
+  <div class="treatment-grid">
+    <div class="treatment">
+      <i class="fas fa-running"></i>
+      <h3>Orthopedic &amp; Sports Injuries</h3>
+      <p>Stem cell therapy to support joint health and accelerate recovery from sports-related injuries.</p>
+      <a href="#contact">Learn More</a>
     </div>
-    <div class="testimonial">
-      “After years of pain, I finally found relief through Gold Health’s stem cell therapy. I can’t recommend them enough.”
-      <span>- James R.</span>
+    <div class="treatment">
+      <i class="fas fa-spine"></i>
+      <h3>Spine &amp; Disc Conditions</h3>
+      <p>Regenerative treatments designed to relieve back pain and promote disc healing.</p>
+      <a href="#contact">Learn More</a>
     </div>
-  </section>
-  <section class="offer-section">
-    <h2>Limited‑Time Offer</h2>
-    <p>Book now and receive a complimentary consultation and personalized treatment plan.</p>
-    <a href="#contact">Claim Your Free Consultation</a>
-  </section>
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Email: info@goldhealth.com</p>
-    <p>Phone: (555) 123‑4567</p>
-    <p>Address: 123 Coastal Ave, Salt Lake City, UT</p>
-    <a href="mailto:info@goldhealth.com" class="cta-button">Start Your Journey</a>
-  </section>
-  <footer>
-    &copy; 2025 Gold Health. All rights reserved.
-  </footer>
+    <div class="treatment">
+      <i class="fas fa-dna"></i>
+      <h3>Autoimmune Diseases</h3>
+      <p>Advanced cell therapies aimed at modulating the immune system for chronic conditions.</p>
+      <a href="#contact">Learn More</a>
+    </div>
+    <div class="treatment">
+      <i class="fas fa-spa"></i>
+      <h3>Cosmetic &amp; Skin Rejuvenation</h3>
+      <p>Therapies to enhance skin vitality, reduce scars, and rejuvenate appearance.</p>
+      <a href="#contact">Learn More</a>
+    </div>
+    <div class="treatment">
+      <i class="fas fa-apple-alt"></i>
+      <h3>Crohn’s Disease &amp; UC</h3>
+      <p>Innovative treatments to reduce inflammation and support digestive health.</p>
+      <a href="#contact">Learn More</a>
+    </div>
+    <div class="treatment">
+      <i class="fas fa-heartbeat"></i>
+      <h3>Chronic Pain</h3>
+      <p>Personalized therapies to manage chronic pain and improve quality of life.</p>
+      <a href="#contact">Learn More</a>
+    </div>
+  </div>
+</section>
+<section class="offer">
+  <h2>Limited-Time Offer</h2>
+  <p>Book a free consultation today and discover how Gold Health can transform your wellbeing.</p>
+  <a href="#contact" class="btn">Claim Your Free Consultation</a>
+</section>
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
+  <p>Ready to take the next step? Reach out to our team to learn more and book your consultation.</p>
+  <p>Email: <a href="mailto:info@goldhealth.com">info@goldhealth.com</a> | Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+  <p>123 Beachside Avenue, Suite 100, Miami, FL 33101</p>
+  <a href="#contact" class="cta-btn">Book Your Free Consultation</a>
+</section>
+<footer>
+  &copy; 2025 Gold Health. All rights reserved.
+</footer>
 </body>
 </html>
