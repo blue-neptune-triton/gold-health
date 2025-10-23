@@ -23,27 +23,14 @@ section {
   padding: 3rem 1rem;
 }
 .hero {
-  background-image: url('https://images.unsplash.com/photo-1493558103817-58b2924bce98?auto=format&fit=crop&w=1200&q=80');
+  background-image: linear-gradient(rgba(1,73,124,0.7), rgba(232,179,57,0.7)), url('https://images.unsplash.com/photo-1493558103817-58b2924bce98?auto=format&fit=crop&w=1600&q=80');
   background-size: cover;
   background-position: center;
   color: white;
   text-align: center;
   padding: 7rem 1rem;
-  position: relative;
-}
-.hero::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
-  z-index: 0;
-}
-.hero .content {
-  position: relative;
-  z-index: 1;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 .hero h1 {
   font-size: 2.5rem;
@@ -54,18 +41,19 @@ section {
   margin-bottom: 2rem;
 }
 .hero .cta-btn {
-  background-color: var(--accent);
-  color: white;
+  background-image: linear-gradient(90deg, var(--accent), #f5d47c);
+  color: #012a4a;
   border: none;
   padding: 1rem 2rem;
   font-size: 1.1rem;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
 }
 .steps {
-  background-color: var(--secondary);
+  background-image: linear-gradient(180deg, #013a63, #01497C);
   color: white;
   text-align: center;
+  border-radius: 30px;
 }
 .steps h2 {
   margin-bottom: 2rem;
@@ -78,11 +66,12 @@ section {
   gap: 1rem;
 }
 .step-card {
-  background-color: var(--primary);
-  border-radius: 8px;
+  background: rgba(1,73,124,0.8);
+  border-radius: 20px;
   padding: 1.5rem;
   flex: 1 1 200px;
   max-width: 250px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 .step-card h3 {
   font-size: 1.25rem;
@@ -98,6 +87,7 @@ section {
 }
 .why {
   background-color: var(--light);
+  border-radius: 30px;
 }
 .why h2 {
   text-align: center;
@@ -133,6 +123,7 @@ section {
 }
 .faq {
   background-color: var(--light);
+  border-radius: 30px;
 }
 .faq h2 {
   text-align: center;
@@ -141,18 +132,20 @@ section {
 details {
   background: white;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 10px;
   padding: 1rem;
   margin-bottom: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 details summary {
   cursor: pointer;
   font-weight: bold;
 }
 .testimonials {
-  background-color: var(--secondary);
+  background-image: linear-gradient(180deg, #012a4a, #01497C);
   color: white;
   text-align: center;
+  border-radius: 30px;
 }
 .testimonials h2 {
   margin-bottom: 1rem;
@@ -166,10 +159,11 @@ details summary {
   margin-bottom: 0.5rem;
 }
 .cta {
-  background-color: var(--primary);
+  background-image: linear-gradient(90deg, var(--primary), var(--secondary));
   color: white;
   text-align: center;
   padding: 3rem 1rem;
+  border-radius: 30px;
 }
 .cta h2 {
   margin-bottom: 1rem;
@@ -189,15 +183,15 @@ details summary {
   margin-bottom: 1rem;
   width: 100%;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 .cta button {
-  background-color: var(--accent);
-  color: white;
+  background-image: linear-gradient(90deg, var(--accent), #f5d47c);
+  color: #012a4a;
   border: none;
   padding: 0.75rem 2rem;
   font-size: 1rem;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
 }
 .cta .secure {
@@ -253,7 +247,7 @@ details summary {
 <section class="why">
   <h2>Why Choose Gold Health</h2>
   <div class="why-list">
-    <div class="why-item"><i class="fas fa-user-md"></i><p>Experienced & compassionate medical team dedicated to your well-being.</p></div>
+    <div class="why-item"><i class="fas fa-user-md"></i><p>Experienced &amp; compassionate medical team dedicated to your well-being.</p></div>
     <div class="why-item"><i class="fas fa-hand-holding-medical"></i><p>Focus on advanced, non-invasive regenerative therapies.</p></div>
     <div class="why-item"><i class="fas fa-balance-scale"></i><p>Transparent, patient-first approach with clear expectations and costs.</p></div>
     <div class="why-item"><i class="fas fa-heartbeat"></i><p>Supportive environment that respects your choices and comfort.</p></div>
@@ -272,7 +266,7 @@ details summary {
   <p>Mexico offers progressive regulations that allow access to regenerative therapies still under study in other countries. Gold Health operates under COFEPRIS authorization to provide compliant, ethical treatments. Our geographic location also makes it an accessible and cost-effective destination for patients from the U.S. and beyond.</p>
 </section>
 <section class="content-section">
-  <h2>Safety & Ethics</h2>
+  <h2>Safety &amp; Ethics</h2>
   <p>Your safety is our top priority. We adhere to all regulations set by Mexican health authorities and ensure that our therapies use ethically sourced materials. Our staff will provide you with thorough information about potential risks, and we never claim guaranteed results.</p>
 </section>
 <section class="faq">
