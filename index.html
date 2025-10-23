@@ -1,188 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gold Health | Certified Regenerative Clinic in Mexico</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    :root {
-      --primary: #00796b;
-      --secondary: #004d40;
-      --accent: #c48b39;
-      --light: #f5f5f5;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      color: #333;
-    }
-    section {
-      padding: 3rem 1rem;
-    }
-    .hero {
-      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      text-align: center;
-      padding: 6rem 1rem;
-      position: relative;
-    }
-    .hero::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.4);
-      z-index: 0;
-    }
-    .hero .content {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-    }
-    .cta-btn {
-      background: var(--primary);
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .cta-btn:hover {
-      background: var(--secondary);
-    }
-    .content-section {
-      background: var(--light);
-      border-radius: 8px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
-    .content-section h2 {
-      color: var(--secondary);
-      margin-bottom: 1rem;
-    }
-    .content-section p {
-      margin-bottom: 1rem;
-    }
-    .testimonials blockquote {
-      font-style: italic;
-      margin: 1rem 0;
-    }
-    .cta-final {
-      text-align: center;
-      background: var(--primary);
-      color: white;
-      padding: 3rem 1rem;
-      border-radius: 8px;
-    }
-    .cta-final form {
-      margin-top: 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .cta-final input {
-      padding: 0.5rem;
-      width: 250px;
-      border: none;
-      border-radius: 4px;
-    }
-    .cta-final button {
-      background: var(--accent);
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 4px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .cta-final button:hover {
-      background: #b37a2a;
-    }
-    footer {
-      background: var(--secondary);
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    footer small {
-      font-size: 0.8rem;
-      display: block;
-      margin-top: 1rem;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold Health | Pioneering Regenerative Therapy in Mexico</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+  --primary: #00796b;
+  --secondary: #004d40;
+  --accent: #c48b39;
+  --light: #f5f5f5;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+section {
+  padding: 3rem 1rem;
+}
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 7rem 1rem;
+  position: relative;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 0;
+}
+.hero .content {
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+.hero .cta-btn {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.steps {
+  background-color: var(--secondary);
+  color: white;
+  text-align: center;
+}
+.steps h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.step-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+}
+.step-card {
+  background-color: var(--primary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  flex: 1 1 200px;
+  max-width: 250px;
+}
+.step-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.step-card p {
+  font-size: 0.9rem;
+}
+.step-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+.why {
+  background-color: var(--light);
+}
+.why h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.why-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.why-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.why-item i {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-right: 0.75rem;
+}
+.why-item p {
+  margin: 0;
+}
+.content-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.content-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.content-section p {
+  margin-bottom: 1rem;
+}
+.faq {
+  background-color: var(--light);
+}
+.faq h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+details {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+details summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+.testimonials {
+  background-color: var(--secondary);
+  color: white;
+  text-align: center;
+}
+.testimonials h2 {
+  margin-bottom: 1rem;
+}
+.testimonial-item {
+  max-width: 600px;
+  margin: 1rem auto;
+  font-style: italic;
+}
+.testimonial-item p {
+  margin-bottom: 0.5rem;
+}
+.cta {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.cta h2 {
+  margin-bottom: 1rem;
+}
+.cta p {
+  margin-bottom: 2rem;
+}
+.cta form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.cta input {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+}
+.cta button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cta .secure {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+@media(max-width:768px) {
+  .step-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .step-card {
+    max-width: none;
+    width: 100%;
+  }
+}
+</style>
 </head>
 <body>
-  <section class="hero">
-    <div class="content">
-      <h1>Discover the Science of Regenerative Therapy in Mexico</h1>
-      <p>Learn about the potential of regenerative medicine under the guidance of experienced, board‑certified clinicians in our certified Mexican facility.</p>
-      <a href="#cta-final" class="cta-btn">Schedule a Free Informational Call</a>
-      <div style="margin-top:1rem;">
-        <i class="fa-solid fa-shield-check"></i> Certified Facility&nbsp;&nbsp;
-        <i class="fa-solid fa-user-doctor"></i> Board‑Certified Physicians&nbsp;&nbsp;
-        <i class="fa-solid fa-lock"></i> Secure Form
-      </div>
+<section class="hero">
+  <div class="content">
+    <h1>The Future of Health Is Here</h1>
+    <p>Experience cutting-edge regenerative therapies in a compassionate, certified facility located in Mexico.</p>
+    <button class="cta-btn" onclick="document.getElementById('cta-form').scrollIntoView({behavior:'smooth'});">Schedule a Free Informational Call</button>
+  </div>
+</section>
+<section class="steps">
+  <h2>4 Easy Steps to Regenerative Therapy</h2>
+  <div class="step-cards">
+    <div class="step-card">
+      <div class="step-number">1</div>
+      <h3>Speak With Us</h3>
+      <p>Have a friendly conversation with our patient coordinators to discuss your health goals.</p>
     </div>
-  </section>
-  <section class="content-section">
-    <h2>About Our Clinic</h2>
-    <p>Gold Health is dedicated to offering access to regenerative therapies within Mexico’s regulated research framework. Our team of board‑certified physicians and scientists has decades of experience working with advanced biologics and follows ethically approved protocols reviewed by independent committees and COFEPRIS.</p>
-    <p>We strive to provide a welcoming environment, transparent information, and compassionate care to everyone who visits our clinic.</p>
-  </section>
-  <section class="content-section">
-    <h2>Understanding Regenerative Therapy</h2>
-    <p>Regenerative therapies harness cells that are being studied for their potential to support the body’s natural repair processes. Researchers are exploring how mesenchymal stem cells may help modulate inflammation and encourage tissue restoration under clinical supervision.</p>
-    <p>At Gold Health, these therapies are offered within observational studies or approved research protocols. Individual experiences vary, and there are no guaranteed outcomes.</p>
-  </section>
-  <section class="content-section">
-    <h2>Why Mexico?</h2>
-    <p><strong>Regulatory Framework:</strong> Mexico requires stem cell procedures to take place within sanctioned research protocols reviewed by independent ethics committees and sanctioned by COFEPRIS. The 2016 biotechnology standards enforce rigorous quality control measures including cell viability, sterility and potency testing.</p>
-    <p><strong>Cost &amp; Access:</strong> Medical care in Mexico can be significantly more affordable than in the U.S. while maintaining high standards. Short travel times from North America and bilingual staff make visits convenient.</p>
-    <p><strong>Experience:</strong> Our clinic employs physicians trained in the U.S., Canada or Europe and offers modern facilities, adhering to ethical sourcing and traceability requirements.</p>
-    <p><strong>Cultural Experience:</strong> Enjoy rest and recovery in a warm, welcoming environment along Mexico’s beautiful coast.</p>
-  </section>
-  <section class="content-section">
-    <h2>Safety, Ethics &amp; Compliance</h2>
-    <p>We operate within Mexico’s legal and ethical framework. Article 327 prohibits commercialization of organs, tissues or cells, and Article 330 permits stem cell transplants only after scientific evaluation of risks and benefits. Our therapies are offered only under approved research protocols and observational studies.</p>
-    <p>The 2016 biotechnology standards require testing for cell viability, sterility and potency. We use ethically sourced autologous or allogeneic cells with full traceability and quality assurance. All procedures are performed by licensed physicians, and we encourage patients to consult their primary healthcare providers before participating.</p>
-  </section>
-  <section class="content-section testimonials">
-    <h2>What Our Guests Say</h2>
-    <blockquote>“The staff was warm and attentive. They explained every step of the process and made me feel safe.”</blockquote>
-    <blockquote>“I appreciated the transparency and the time the team took to answer all my questions.”</blockquote>
-    <blockquote>“Gold Health provided a calm, professional environment where I felt heard and respected.”</blockquote>
-  </section>
-  <section id="cta-final" class="cta-final">
-    <h2>Ready to Learn More?</h2>
-    <p>Speak with a patient coordinator to explore if regenerative therapies under research may be right for you.</p>
-    <form>
-      <input type="text" placeholder="Name" required>
-      <input type="email" placeholder="Email" required>
-      <input type="tel" placeholder="Phone" required>
-      <button type="submit">Schedule My Free Informational Call</button>
-    </form>
-    <p style="margin-top:0.5rem;"><i class="fa-solid fa-lock"></i> Your info is 100% secure.</p>
-  </section>
-  <footer>
-    <p>© 2025 Gold Health Clinic. All rights reserved.</p>
-    <small>Stem cell therapies discussed on this site are not approved to diagnose, treat, cure, or prevent any disease. Individual results vary and are not guaranteed.</small>
-  </footer>
+    <div class="step-card">
+      <div class="step-number">2</div>
+      <h3>Medical Consultation</h3>
+      <p>Meet our board-certified doctors for a thorough evaluation of your needs.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-number">3</div>
+      <h3>Personalized Plan</h3>
+      <p>Receive a tailored regenerative therapy plan designed just for you.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-number">4</div>
+      <h3>Ongoing Support</h3>
+      <p>We stay with you every step of the way for follow-up and long-term care.</p>
+    </div>
+  </div>
+</section>
+<section class="why">
+  <h2>Why Choose Gold Health</h2>
+  <div class="why-list">
+    <div class="why-item"><i class="fas fa-user-md"></i><p>Experienced & compassionate medical team dedicated to your well-being.</p></div>
+    <div class="why-item"><i class="fas fa-hand-holding-medical"></i><p>Focus on advanced, non-invasive regenerative therapies.</p></div>
+    <div class="why-item"><i class="fas fa-balance-scale"></i><p>Transparent, patient-first approach with clear expectations and costs.</p></div>
+    <div class="why-item"><i class="fas fa-heartbeat"></i><p>Supportive environment that respects your choices and comfort.</p></div>
+  </div>
+</section>
+<section class="content-section">
+  <h2>About Our Clinic</h2>
+  <p>Gold Health operates a certified clinic in Mexico offering access to regenerative therapies under research. Our team comprises board-certified doctors and caring staff who prioritize safety, efficacy, and compassionate care. We provide a welcoming space for international patients exploring innovative options.</p>
+</section>
+<section class="content-section">
+  <h2>Understanding Regenerative Therapy</h2>
+  <p>Regenerative therapy is an umbrella term for treatments that aim to stimulate the body’s natural healing processes. Researchers are exploring how cellular therapies and biologics may support tissue repair and inflammation modulation. At Gold Health, we guide you through what these therapies involve and ensure you have realistic expectations.</p>
+</section>
+<section class="content-section">
+  <h2>Why Mexico?</h2>
+  <p>Mexico offers progressive regulations that allow access to regenerative therapies still under study in other countries. Gold Health operates under COFEPRIS authorization to provide compliant, ethical treatments. Our geographic location also makes it an accessible and cost-effective destination for patients from the U.S. and beyond.</p>
+</section>
+<section class="content-section">
+  <h2>Safety & Ethics</h2>
+  <p>Your safety is our top priority. We adhere to all regulations set by Mexican health authorities and ensure that our therapies use ethically sourced materials. Our staff will provide you with thorough information about potential risks, and we never claim guaranteed results.</p>
+</section>
+<section class="faq">
+  <h2>Frequently Asked Questions</h2>
+  <details>
+    <summary>What exactly is regenerative therapy?</summary>
+    <p>Regenerative therapy refers to a range of treatments that use cells or biologics to support the body’s repair mechanisms. While promising, these therapies are still being studied to understand their safety and efficacy.</p>
+  </details>
+  <details>
+    <summary>Is regenerative therapy safe?</summary>
+    <p>Gold Health follows strict protocols and operates under COFEPRIS approval. We only source materials from certified labs and maintain rigorous quality control. However, as with any medical intervention, there are potential risks which we will discuss transparently during your consultation.</p>
+  </details>
+  <details>
+    <summary>What can I expect after treatment?</summary>
+    <p>Every patient responds differently. Some may experience improvement in their condition, while others may see minimal change. Our team will stay in touch to monitor your progress and provide ongoing support.</p>
+  </details>
+</section>
+<section class="testimonials">
+  <h2>What Our Patients Are Saying</h2>
+  <div class="testimonial-item">
+    <p>“The team at Gold Health made me feel comfortable from day one. I appreciated the honest discussion about my options.”</p>
+    <p>– J. Martinez</p>
+  </div>
+  <div class="testimonial-item">
+    <p>“I wanted to explore regenerative therapy and Gold Health provided clear guidance and a supportive environment.”</p>
+    <p>– S. Reynolds</p>
+  </div>
+  <div class="testimonial-item">
+    <p>“While results vary, my experience with Gold Health was professional and caring. I felt respected and informed.”</p>
+    <p>– L. Wong</p>
+  </div>
+</section>
+<section class="cta" id="cta-form">
+  <h2>Ready to Learn More?</h2>
+  <p>Speak with a patient coordinator to explore if regenerative therapies may be right for you.</p>
+  <form>
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <button type="submit">Schedule My Free Informational Call</button>
+    <p class="secure"><i class="fas fa-lock"></i> Your information is 100% secure and confidential.</p>
+  </form>
+</section>
 </body>
 </html>
